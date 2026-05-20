@@ -279,7 +279,7 @@ function App() {
           <SectionBadge number="1" label="Introducing Altum IA" />
 
           <div className="px-5 sm:px-8 lg:px-12">
-            <h2 className="mb-12 max-w-[13ch] text-[clamp(1.5rem,4vw,3.2rem)] font-medium leading-[1.12] tracking-[-0.02em] text-gray-900 sm:mb-16 lg:mb-28">
+            <h2 className="mb-12 max-w-[16ch] text-[clamp(1.5rem,4vw,3.2rem)] font-medium leading-[1.12] tracking-[-0.02em] text-gray-900 sm:mb-16 sm:max-w-[18ch] lg:mb-28 lg:ml-[12%] lg:max-w-[22ch]">
               Soluciones digitales para empresas/personas que quieren crecer,
               automatizar y escalar.
             </h2>
