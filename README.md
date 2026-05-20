@@ -15,3 +15,7 @@ Landing page built with React 18, Vite and Tailwind CSS.
 - `npm run dev`
 - `npm run build`
 - `npm run preview`
+
+## Recent updates
+
+- The featured project card now uses the intrinsic height of the `Viviendas Podesta` capture, without extra frame padding or background around the image.

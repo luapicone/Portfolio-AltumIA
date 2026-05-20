@@ -371,11 +371,11 @@ function App() {
 
           <div className="grid grid-cols-1 gap-5 px-5 sm:gap-6 sm:px-8 md:grid-cols-2 lg:gap-7 lg:px-12">
             <article>
-              <div className="group relative aspect-[329/246] cursor-pointer overflow-hidden rounded-2xl bg-[#1a1d2e]">
+              <div className="group relative cursor-pointer overflow-hidden rounded-2xl">
                 <img
                   src={viviendasPodestaProject}
                   alt="Proyecto Viviendas Podesta"
-                  className="h-full w-full object-contain p-3 sm:p-4"
+                  className="block w-full rounded-2xl"
                 />
                 <div className="absolute bottom-4 left-4">
                   <div className="flex h-9 w-9 items-center overflow-hidden rounded-full bg-white transition-all duration-300 ease-in-out group-hover:w-[148px]">
