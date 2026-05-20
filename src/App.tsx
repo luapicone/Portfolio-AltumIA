@@ -7,6 +7,7 @@ import {
   Shader,
   Swirl,
 } from 'shaders/react'
+import altumLogo from './assets/altum-logo.webp'
 
 const NAV_LINKS = ['Projects', 'Studio', 'Journal', 'Connect']
 
@@ -198,9 +199,11 @@ function App() {
           <div className="rounded-full bg-white p-[5px]">
             <div className="flex items-center justify-between gap-4">
               <div className="flex items-center gap-4 pl-1 sm:gap-6 sm:pl-2">
-                <div className="flex h-9 w-9 items-center justify-center rounded-full bg-gray-900 text-[10px] font-bold tracking-tight text-white sm:h-10 sm:w-10 sm:text-[11px]">
-                  AX
-                </div>
+                <img
+                  src={altumLogo}
+                  alt="Altum IA logo"
+                  className="h-9 w-9 rounded-full object-cover sm:h-10 sm:w-10"
+                />
 
                 <nav className="hidden items-center gap-6 md:flex">
                   {NAV_LINKS.map((item) => (
