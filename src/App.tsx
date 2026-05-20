@@ -282,14 +282,14 @@ function App() {
             <p className="mb-5 text-[13px] tracking-wide text-gray-900 sm:mb-8 sm:text-[14px]">
               Altum IA
             </p>
-            <h1 className="max-w-[14ch] text-[clamp(1.75rem,7vw,4.2rem)] font-medium leading-[1.08] tracking-[-0.03em] text-gray-900 sm:max-w-[15ch] sm:text-[clamp(2.5rem,5vw,4.2rem)]">
-              We craft digital experiences
+            <h1 className="max-w-[16ch] text-[clamp(1.75rem,7vw,4.2rem)] font-medium leading-[1.08] tracking-[-0.03em] text-gray-900 sm:max-w-[18ch] sm:text-[clamp(2.5rem,5vw,4.2rem)]">
+              Diseñamos soluciones digitales
               <br className="hidden sm:block" />
               <span className="sm:hidden"> </span>
-              for brands ready to dominate
+              para transformar la forma en que
               <br className="hidden sm:block" />
               <span className="sm:hidden"> </span>
-              their category online.
+              las empresas venden, operan y crecen.
             </h1>
 
             <div className="mt-8 flex flex-col gap-4 sm:mt-12 sm:flex-row sm:items-center sm:gap-5">
