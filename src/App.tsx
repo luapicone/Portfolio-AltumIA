@@ -10,6 +10,8 @@ import {
 import altumLogo from './assets/altum-logo.webp'
 import gestorLeadsDashboard from './assets/gestor-leads-dashboard.webp'
 import gestorLeadsDetail from './assets/gestor-leads-detail.webp'
+import proyectoAltumIaDemo from './assets/proyecto-altum-ia-demo.mp4'
+import proyectoAltumIaDemoPoster from './assets/proyecto-altum-ia-demo-poster.webp'
 import viviendasPodestaProject from './assets/viviendas-podesta-project.webp'
 import viviendasPodestaProject2 from './assets/viviendas-podesta-project-2.webp'
 import viviendasPodestaProject3 from './assets/viviendas-podesta-project-3.webp'
@@ -393,7 +395,7 @@ function App() {
             </h2>
           </div>
 
-          <div className="grid grid-cols-1 gap-5 px-5 sm:gap-6 sm:px-8 md:grid-cols-2 lg:gap-7 lg:px-12">
+          <div className="grid grid-cols-1 gap-5 px-5 sm:gap-6 sm:px-8 md:grid-cols-2 xl:grid-cols-3 lg:gap-7 lg:px-12">
             <article>
               <div className="group relative cursor-pointer overflow-hidden rounded-2xl">
                 {VIVIENDAS_PODESTA_CAROUSEL_IMAGES.map((image, index) => (
@@ -465,6 +467,40 @@ function App() {
               </p>
               <h3 className="mt-1 text-[14px] font-semibold text-gray-900 sm:text-[15px]">
                 Gestor Leads
+              </h3>
+            </article>
+
+            <article>
+              <div className="group relative aspect-[252/143] overflow-hidden rounded-2xl bg-[#0f2149]">
+                <video
+                  className="h-full w-full object-cover"
+                  autoPlay
+                  muted
+                  loop
+                  playsInline
+                  preload="metadata"
+                  poster={proyectoAltumIaDemoPoster}
+                >
+                  <source src={proyectoAltumIaDemo} type="video/mp4" />
+                </video>
+                <div className="pointer-events-none absolute inset-0 bg-gradient-to-t from-[#071022]/55 via-transparent to-transparent" />
+                <div className="absolute bottom-4 left-4">
+                  <div className="flex h-9 w-9 items-center overflow-hidden rounded-full bg-white transition-all duration-300 ease-in-out group-hover:w-[160px]">
+                    <span className="ml-4 whitespace-nowrap text-[13px] font-medium text-gray-900 opacity-0 transition-opacity delay-100 duration-300 ease-in-out group-hover:opacity-100">
+                      Demo en video
+                    </span>
+                    <span className="ml-auto mr-3 text-gray-900">
+                      <LinkGlyph />
+                    </span>
+                  </div>
+                </div>
+              </div>
+              <p className="mt-4 text-[13px] leading-relaxed text-gray-600 sm:text-[14px]">
+                Un showcase visual para una experiencia e-commerce premium,
+                con foco en producto, navegación y dirección de arte.
+              </p>
+              <h3 className="mt-1 text-[14px] font-semibold text-gray-900 sm:text-[15px]">
+                Perfume Gallery
               </h3>
             </article>
           </div>
