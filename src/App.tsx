@@ -286,10 +286,10 @@ function App() {
               Diseñamos soluciones digitales
               <br className="hidden sm:block" />
               <span className="sm:hidden"> </span>
-              para transformar la forma en que
+              para negocios que quieren
               <br className="hidden sm:block" />
               <span className="sm:hidden"> </span>
-              las empresas venden, operan y crecen.
+              operar mejor y crecer más rápido.
             </h1>
 
             <div className="mt-8 flex flex-col gap-4 sm:mt-12 sm:flex-row sm:items-center sm:gap-5">
