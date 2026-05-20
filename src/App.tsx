@@ -11,6 +11,8 @@ import altumLogo from './assets/altum-logo.webp'
 import gestorLeadsDashboard from './assets/gestor-leads-dashboard.webp'
 import gestorLeadsDetail from './assets/gestor-leads-detail.webp'
 import viviendasPodestaProject from './assets/viviendas-podesta-project.webp'
+import viviendasPodestaProject2 from './assets/viviendas-podesta-project-2.webp'
+import viviendasPodestaProject3 from './assets/viviendas-podesta-project-3.webp'
 
 const NAV_LINKS = [
   { label: 'Proyectos', href: '#projects' },
@@ -26,6 +28,11 @@ const LARGE_IMAGE =
   'https://images.higgs.ai/?default=1&output=webp&url=https%3A%2F%2Fd8j0ntlcm91z4.cloudfront.net%2Fuser_38xzZboKViGWJOttwIXH07lWA1P%2Fhf_20260516_090133_c157d30b-a99a-4477-bec1-a446149ec3f2.png&w=1280&q=85'
 
 const EASING_CLASS = 'duration-500 ease-[cubic-bezier(0.25,0.1,0.25,1)]'
+const VIVIENDAS_PODESTA_CAROUSEL_IMAGES = [
+  viviendasPodestaProject,
+  viviendasPodestaProject2,
+  viviendasPodestaProject3,
+]
 const PROJECT_CAROUSEL_IMAGES = [
   gestorLeadsDashboard,
   gestorLeadsDetail,
@@ -163,7 +170,7 @@ function ShaderHeroBackground() {
 
 function App() {
   const [isMenuOpen, setIsMenuOpen] = useState(false)
-  const [projectCarouselIndex, setProjectCarouselIndex] = useState(0)
+  const [carouselTick, setCarouselTick] = useState(0)
 
   useEffect(() => {
     document.body.style.overflow = isMenuOpen ? 'hidden' : ''
@@ -175,9 +182,7 @@ function App() {
 
   useEffect(() => {
     const intervalId = window.setInterval(() => {
-      setProjectCarouselIndex((current) =>
-        current === PROJECT_CAROUSEL_IMAGES.length - 1 ? 0 : current + 1
-      )
+      setCarouselTick((current) => current + 1)
     }, 3500)
 
     return () => {
@@ -391,15 +396,28 @@ function App() {
           <div className="grid grid-cols-1 gap-5 px-5 sm:gap-6 sm:px-8 md:grid-cols-2 lg:gap-7 lg:px-12">
             <article>
               <div className="group relative cursor-pointer overflow-hidden rounded-2xl">
+                {VIVIENDAS_PODESTA_CAROUSEL_IMAGES.map((image, index) => (
+                  <img
+                    key={image}
+                    src={image}
+                    alt="Proyecto Viviendas Podesta"
+                    className={`absolute inset-0 h-full w-full rounded-2xl object-cover transition-opacity duration-700 ease-out ${
+                      index === carouselTick % VIVIENDAS_PODESTA_CAROUSEL_IMAGES.length
+                        ? 'opacity-100'
+                        : 'opacity-0'
+                    }`}
+                  />
+                ))}
                 <img
-                  src={viviendasPodestaProject}
-                  alt="Proyecto Viviendas Podesta"
-                  className="block w-full rounded-2xl"
+                  src={VIVIENDAS_PODESTA_CAROUSEL_IMAGES[0]}
+                  alt=""
+                  aria-hidden="true"
+                  className="block w-full opacity-0"
                 />
                 <div className="absolute bottom-4 left-4">
                   <div className="flex h-9 w-9 items-center overflow-hidden rounded-full bg-white transition-all duration-300 ease-in-out group-hover:w-[148px]">
                     <span className="ml-4 whitespace-nowrap text-[13px] font-medium text-gray-900 opacity-0 transition-opacity delay-100 duration-300 ease-in-out group-hover:opacity-100">
-                      Learn more
+                      Ver proyecto
                     </span>
                     <span className="ml-auto mr-3 text-gray-900">
                       <LinkGlyph />
@@ -408,11 +426,11 @@ function App() {
                 </div>
               </div>
               <p className="mt-4 text-[13px] leading-relaxed text-gray-600 sm:text-[14px]">
-                Winner of Site of the Month 2025 - an interactive 3D showcase
-                driving record engagement
+                Viviendas industrializadas con foco en calidad constructiva,
+                calidez interior y presencia visual consistente.
               </p>
               <h3 className="mt-1 text-[14px] font-semibold text-gray-900 sm:text-[15px]">
-                Narrativ
+                Viviendas Podesta
               </h3>
             </article>
 
@@ -424,7 +442,9 @@ function App() {
                     src={image}
                     alt="Captura del gestor de leads de Altum IA"
                     className={`absolute inset-0 h-full w-full object-cover transition-opacity duration-700 ease-out ${
-                      index === projectCarouselIndex ? 'opacity-100' : 'opacity-0'
+                      index === carouselTick % PROJECT_CAROUSEL_IMAGES.length
+                        ? 'opacity-100'
+                        : 'opacity-0'
                     }`}
                   />
                 ))}

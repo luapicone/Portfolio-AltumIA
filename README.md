@@ -20,3 +20,4 @@ Landing page built with React 18, Vite and Tailwind CSS.
 
 - The featured project card now uses the intrinsic height of the `Viviendas Podesta` capture, without extra frame padding or background around the image.
 - The right-side featured project card now rotates automatically between two `Gestor Leads` product captures, without manual navigation arrows.
+- The left-side `Viviendas Podesta` card now rotates automatically between three project captures and its label/copy now matches the real project shown.
