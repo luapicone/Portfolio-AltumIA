@@ -242,7 +242,7 @@ function App() {
               </div>
 
               <div className="mt-8">
-                <PrimaryButton label="Start a project" />
+                <PrimaryButton label="Iniciar proyecto" />
               </div>
             </div>
           </div>
@@ -265,7 +265,7 @@ function App() {
             </h1>
 
             <div className="mt-8 flex flex-col gap-4 sm:mt-12 sm:flex-row sm:items-center sm:gap-5">
-              <PrimaryButton label="Start a project" />
+              <PrimaryButton label="Iniciar proyecto" />
             </div>
           </div>
         </div>
