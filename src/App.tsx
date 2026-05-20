@@ -1,5 +1,5 @@
 import { useEffect, useState } from 'react'
-import { ArrowRight, Clock3, Menu, X } from 'lucide-react'
+import { ArrowRight, Menu, X } from 'lucide-react'
 import {
   ChromaFlow,
   FilmGrain,
@@ -9,7 +9,12 @@ import {
 } from 'shaders/react'
 import altumLogo from './assets/altum-logo.webp'
 
-const NAV_LINKS = ['Proyectos', 'Estudio', 'Diario', 'Contacto']
+const NAV_LINKS = [
+  { label: 'Proyectos', href: '#projects' },
+  { label: 'Estudio', href: '#studio' },
+  { label: 'Diario', href: '#journal' },
+  { label: 'Contacto', href: '#connect' },
+]
 
 const SMALL_IMAGE =
   'https://images.higgs.ai/?default=1&output=webp&url=https%3A%2F%2Fd8j0ntlcm91z4.cloudfront.net%2Fuser_38xzZboKViGWJOttwIXH07lWA1P%2Fhf_20260516_090123_74be96d4-9c1b-40cf-932a-96f4f4babed3.png&w=1280&q=85'
@@ -17,15 +22,6 @@ const LARGE_IMAGE =
   'https://images.higgs.ai/?default=1&output=webp&url=https%3A%2F%2Fd8j0ntlcm91z4.cloudfront.net%2Fuser_38xzZboKViGWJOttwIXH07lWA1P%2Fhf_20260516_090133_c157d30b-a99a-4477-bec1-a446149ec3f2.png&w=1280&q=85'
 
 const EASING_CLASS = 'duration-500 ease-[cubic-bezier(0.25,0.1,0.25,1)]'
-
-function getLondonTime() {
-  return new Intl.DateTimeFormat('en-GB', {
-    hour: '2-digit',
-    minute: '2-digit',
-    hour12: false,
-    timeZone: 'Europe/London',
-  }).format(new Date())
-}
 
 function TextRoll({ label }: { label: string }) {
   return (
@@ -73,7 +69,7 @@ function NavCta() {
       type="button"
       className="group inline-flex items-center rounded-full bg-gray-900 py-2 pl-5 pr-2 text-[13px] font-medium text-white"
     >
-      <TextRoll label="Book a strategy call" />
+      <TextRoll label="Contactanos" />
       <span
         className={`ml-3 flex h-6 w-6 items-center justify-center rounded-full bg-white transition-transform ${EASING_CLASS} group-hover:-rotate-45`}
       >
@@ -159,15 +155,6 @@ function ShaderHeroBackground() {
 
 function App() {
   const [isMenuOpen, setIsMenuOpen] = useState(false)
-  const [londonTime, setLondonTime] = useState(() => getLondonTime())
-
-  useEffect(() => {
-    const intervalId = window.setInterval(() => {
-      setLondonTime(getLondonTime())
-    }, 1000)
-
-    return () => window.clearInterval(intervalId)
-  }, [])
 
   useEffect(() => {
     document.body.style.overflow = isMenuOpen ? 'hidden' : ''
@@ -195,24 +182,17 @@ function App() {
                 <nav className="hidden items-center gap-6 md:flex">
                   {NAV_LINKS.map((item) => (
                     <a
-                      key={item}
-                      href={`#${item.toLowerCase()}`}
+                      key={item.href}
+                      href={item.href}
                       className="text-[14px] text-gray-900 transition-colors duration-300 hover:text-gray-500"
                     >
-                      {item}
+                      {item.label}
                     </a>
                   ))}
                 </nav>
               </div>
 
               <div className="hidden items-center gap-5 pr-1 md:flex lg:pr-2">
-                <span className="hidden text-[13px] text-gray-600 lg:inline">
-                  Taking on projects for Q1 2026
-                </span>
-                <div className="flex items-center gap-2 text-[13px] text-gray-600">
-                  <Clock3 size={14} strokeWidth={2} />
-                  <span>{londonTime} in London</span>
-                </div>
                 <NavCta />
               </div>
 
@@ -241,20 +221,15 @@ function App() {
             <div
               className={`rounded-2xl bg-white px-5 pb-5 pt-4 shadow-2xl transition-transform duration-500 ease-[cubic-bezier(0.32,0.72,0,1)] ${isMenuOpen ? 'translate-y-0' : 'translate-y-full'}`}
             >
-              <div className="mb-8 inline-flex items-center gap-2 rounded-full border border-gray-200 px-3 py-1.5 text-[12px] font-medium text-gray-600">
-                <Clock3 size={14} strokeWidth={2} />
-                <span>{londonTime} in London</span>
-              </div>
-
               <div className="space-y-4">
                 {NAV_LINKS.map((item) => (
                   <a
-                    key={item}
-                    href={`#${item.toLowerCase()}`}
+                    key={item.href}
+                    href={item.href}
                     className="block text-[28px] font-medium leading-[32px] text-gray-900"
                     onClick={() => setIsMenuOpen(false)}
                   >
-                    {item}
+                    {item.label}
                   </a>
                 ))}
               </div>
