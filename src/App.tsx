@@ -15,6 +15,7 @@ const NAV_LINKS = [
   { label: 'Diario', href: '#journal' },
   { label: 'Contacto', href: '#connect' },
 ]
+const STATUS_LABEL = 'Agendando reuniones'
 
 const SMALL_IMAGE =
   'https://images.higgs.ai/?default=1&output=webp&url=https%3A%2F%2Fd8j0ntlcm91z4.cloudfront.net%2Fuser_38xzZboKViGWJOttwIXH07lWA1P%2Fhf_20260516_090123_74be96d4-9c1b-40cf-932a-96f4f4babed3.png&w=1280&q=85'
@@ -192,7 +193,10 @@ function App() {
                 </nav>
               </div>
 
-              <div className="hidden items-center gap-5 pr-1 md:flex lg:pr-2">
+              <div className="hidden items-center gap-3 pr-1 md:flex lg:pr-2">
+                <div className="rounded-full border border-gray-200 px-3 py-1 text-[12px] font-medium text-gray-700">
+                  {STATUS_LABEL}
+                </div>
                 <NavCta />
               </div>
 
@@ -221,6 +225,9 @@ function App() {
             <div
               className={`rounded-2xl bg-white px-5 pb-5 pt-4 shadow-2xl transition-transform duration-500 ease-[cubic-bezier(0.32,0.72,0,1)] ${isMenuOpen ? 'translate-y-0' : 'translate-y-full'}`}
             >
+              <div className="mb-5 inline-flex rounded-full border border-gray-200 px-3 py-1 text-[12px] font-medium text-gray-700">
+                {STATUS_LABEL}
+              </div>
               <div className="space-y-4">
                 {NAV_LINKS.map((item) => (
                   <a
