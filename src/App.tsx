@@ -294,7 +294,7 @@ function App() {
                 cada negocio.
               </p>
               <div className="mt-6">
-                <PrimaryButton label="About our studio" />
+                <PrimaryButton label="Acerca de nosotros" />
               </div>
             </div>
 
@@ -335,7 +335,7 @@ function App() {
                   hacen más eficiente la operación.
                 </p>
                 <div className="mt-8">
-                  <PrimaryButton label="About our studio" />
+                  <PrimaryButton label="Acerca de nosotros" />
                 </div>
               </div>
             </div>
