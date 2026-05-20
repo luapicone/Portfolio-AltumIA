@@ -8,6 +8,7 @@ import {
   Swirl,
 } from 'shaders/react'
 import altumLogo from './assets/altum-logo.webp'
+import viviendasPodestaProject from './assets/viviendas-podesta-project.webp'
 
 const NAV_LINKS = [
   { label: 'Proyectos', href: '#projects' },
@@ -371,12 +372,9 @@ function App() {
           <div className="grid grid-cols-1 gap-5 px-5 sm:gap-6 sm:px-8 md:grid-cols-2 lg:gap-7 lg:px-12">
             <article>
               <div className="group relative aspect-[329/246] cursor-pointer overflow-hidden rounded-2xl bg-[#1a1d2e]">
-                <video
-                  src="https://d8j0ntlcm91z4.cloudfront.net/user_38xzZboKViGWJOttwIXH07lWA1P/hf_20260516_122702_390f5305-8719-41d5-ae80-d23ab3796c28.mp4"
-                  autoPlay
-                  muted
-                  loop
-                  playsInline
+                <img
+                  src={viviendasPodestaProject}
+                  alt="Proyecto Viviendas Podesta"
                   className="h-full w-full object-cover"
                 />
                 <div className="absolute bottom-4 left-4">
