@@ -22,3 +22,4 @@ Landing page built with React 18, Vite and Tailwind CSS.
 - The right-side featured project card now rotates automatically between two `Gestor Leads` product captures, without manual navigation arrows.
 - The left-side `Viviendas Podesta` card now rotates automatically between three project captures and its label/copy now matches the real project shown.
 - The projects section now includes a third `Perfume Gallery` card that autoplays a local MP4 demo loop sourced from Luca's Google Drive video.
+- The projects grid now stays at two cards per row on desktop and includes a new `Bertha` card that rotates automatically between four supplied product screenshots, without arrows.
