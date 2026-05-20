@@ -1,4 +1,4 @@
-# Axion Studio Landing
+# Altum IA Landing
 
 Landing page built with React 18, Vite and Tailwind CSS.
 

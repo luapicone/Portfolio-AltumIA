@@ -280,7 +280,7 @@ function App() {
           <div className="flex-1" />
           <div className="mx-auto w-full max-w-[1440px] px-5 pb-14 sm:px-8 sm:pb-16 lg:px-12 lg:pb-20">
             <p className="mb-5 text-[13px] tracking-wide text-gray-900 sm:mb-8 sm:text-[14px]">
-              Axion Studio
+              Altum IA
             </p>
             <h1 className="max-w-[14ch] text-[clamp(1.75rem,7vw,4.2rem)] font-medium leading-[1.08] tracking-[-0.03em] text-gray-900 sm:max-w-[15ch] sm:text-[clamp(2.5rem,5vw,4.2rem)]">
               We craft digital experiences
@@ -319,7 +319,7 @@ function App() {
         className="overflow-hidden bg-white pb-12 pt-16 sm:pb-16 sm:pt-20 lg:pb-24 lg:pt-32"
       >
         <div className="mx-auto max-w-[1440px]">
-          <SectionBadge number="1" label="Introducing Axion" />
+          <SectionBadge number="1" label="Introducing Altum IA" />
 
           <div className="px-5 sm:px-8 lg:px-12">
             <h2 className="mb-12 max-w-[13ch] text-[clamp(1.5rem,4vw,3.2rem)] font-medium leading-[1.12] tracking-[-0.02em] text-gray-900 sm:mb-16 lg:mb-28">
@@ -341,12 +341,12 @@ function App() {
             <div className="mt-10 flex flex-col gap-4 px-5 sm:mt-12 sm:flex-row sm:gap-5 sm:px-8 lg:px-12">
               <img
                 src={SMALL_IMAGE}
-                alt="Axion Studio team workspace"
+                alt="Altum IA team workspace"
                 className="aspect-[438/346] w-full rounded-xl object-cover sm:w-[45%] sm:rounded-2xl"
               />
               <img
                 src={LARGE_IMAGE}
-                alt="Axion Studio creative direction session"
+                alt="Altum IA creative direction session"
                 className="aspect-[900/600] w-full rounded-xl object-cover sm:w-[55%] sm:rounded-2xl"
               />
             </div>
@@ -356,7 +356,7 @@ function App() {
             <div className="self-end">
               <img
                 src={SMALL_IMAGE}
-                alt="Axion Studio team workspace"
+                alt="Altum IA team workspace"
                 className="aspect-[438/346] w-full rounded-2xl object-cover"
               />
             </div>
@@ -379,7 +379,7 @@ function App() {
             <div className="self-end">
               <img
                 src={LARGE_IMAGE}
-                alt="Axion Studio creative direction session"
+                alt="Altum IA creative direction session"
                 className="aspect-[3/2] w-full rounded-2xl object-cover"
               />
             </div>
