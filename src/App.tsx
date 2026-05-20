@@ -280,15 +280,18 @@ function App() {
 
           <div className="px-5 sm:px-8 lg:px-12">
             <h2 className="mb-12 max-w-[13ch] text-[clamp(1.5rem,4vw,3.2rem)] font-medium leading-[1.12] tracking-[-0.02em] text-gray-900 sm:mb-16 lg:mb-28">
-              Strategy-led creatives, delivering results in digital and beyond.
+              Soluciones digitales para empresas/personas que quieren crecer,
+              automatizar y escalar.
             </h2>
           </div>
 
           <div className="lg:hidden">
             <div className="px-5 sm:px-8 lg:px-12">
               <p className="max-w-[32rem] text-[15px] font-medium leading-[1.6] text-gray-900 sm:text-[17px]">
-                Through research, creative thinking and iteration we help
-                growing brands realize their digital full potential.
+                Combinamos estrategia, diseño, desarrollo e inteligencia
+                artificial para crear soluciones digitales que mejoran
+                procesos, captan clientes y hacen más eficiente la operación de
+                cada negocio.
               </p>
               <div className="mt-6">
                 <PrimaryButton label="About our studio" />
@@ -321,11 +324,15 @@ function App() {
             <div className="flex self-start justify-end">
               <div>
                 <p className="whitespace-nowrap text-[16px] font-medium leading-[1.65] text-gray-900">
-                  Through research, creative thinking
+                  Combinamos estrategia, diseño,
                   <br />
-                  and iteration we help growing brands
+                  desarrollo e inteligencia artificial
                   <br />
-                  realize their digital full potential.
+                  para crear soluciones digitales que
+                  <br />
+                  mejoran procesos, captan clientes y
+                  <br />
+                  hacen más eficiente la operación.
                 </p>
                 <div className="mt-8">
                   <PrimaryButton label="About our studio" />
