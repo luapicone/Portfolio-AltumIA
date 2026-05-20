@@ -358,13 +358,13 @@ function App() {
         <div className="mx-auto max-w-[1440px]">
           <SectionBadge
             number="2"
-            label="Featured client work"
+            label="Trabajos para clientes"
             border="border-gray-300"
           />
 
           <div className="px-5 sm:px-8 lg:px-12">
             <h2 className="mb-10 text-[clamp(1.75rem,7vw,4.2rem)] font-medium leading-[1.08] tracking-[-0.03em] text-gray-900 sm:mb-14 sm:text-[clamp(2.5rem,5vw,4.2rem)] lg:mb-16">
-              Our projects
+              Nuestros proyectos
             </h2>
           </div>
 
