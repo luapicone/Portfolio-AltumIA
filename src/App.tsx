@@ -8,6 +8,8 @@ import {
   Swirl,
 } from 'shaders/react'
 import altumLogo from './assets/altum-logo.webp'
+import gestorLeadsDashboard from './assets/gestor-leads-dashboard.webp'
+import gestorLeadsDetail from './assets/gestor-leads-detail.webp'
 import viviendasPodestaProject from './assets/viviendas-podesta-project.webp'
 
 const NAV_LINKS = [
@@ -24,6 +26,10 @@ const LARGE_IMAGE =
   'https://images.higgs.ai/?default=1&output=webp&url=https%3A%2F%2Fd8j0ntlcm91z4.cloudfront.net%2Fuser_38xzZboKViGWJOttwIXH07lWA1P%2Fhf_20260516_090133_c157d30b-a99a-4477-bec1-a446149ec3f2.png&w=1280&q=85'
 
 const EASING_CLASS = 'duration-500 ease-[cubic-bezier(0.25,0.1,0.25,1)]'
+const PROJECT_CAROUSEL_IMAGES = [
+  gestorLeadsDashboard,
+  gestorLeadsDetail,
+]
 
 function TextRoll({ label }: { label: string }) {
   return (
@@ -157,6 +163,7 @@ function ShaderHeroBackground() {
 
 function App() {
   const [isMenuOpen, setIsMenuOpen] = useState(false)
+  const [projectCarouselIndex, setProjectCarouselIndex] = useState(0)
 
   useEffect(() => {
     document.body.style.overflow = isMenuOpen ? 'hidden' : ''
@@ -165,6 +172,18 @@ function App() {
       document.body.style.overflow = ''
     }
   }, [isMenuOpen])
+
+  useEffect(() => {
+    const intervalId = window.setInterval(() => {
+      setProjectCarouselIndex((current) =>
+        current === PROJECT_CAROUSEL_IMAGES.length - 1 ? 0 : current + 1
+      )
+    }, 3500)
+
+    return () => {
+      window.clearInterval(intervalId)
+    }
+  }, [])
 
   return (
     <main className="bg-[#EFEFEF] text-gray-900">
@@ -398,19 +417,21 @@ function App() {
             </article>
 
             <article>
-              <div className="group relative aspect-square cursor-pointer overflow-hidden rounded-2xl bg-[#6b6b6b]">
-                <video
-                  src="https://d8j0ntlcm91z4.cloudfront.net/user_38xzZboKViGWJOttwIXH07lWA1P/hf_20260516_123323_f909c2b8-ff6c-4edf-882b-8ebcdbe389b5.mp4"
-                  autoPlay
-                  muted
-                  loop
-                  playsInline
-                  className="h-full w-full object-cover"
-                />
+              <div className="group relative aspect-[252/143] cursor-pointer overflow-hidden rounded-2xl bg-[#edf0e7]">
+                {PROJECT_CAROUSEL_IMAGES.map((image, index) => (
+                  <img
+                    key={image}
+                    src={image}
+                    alt="Captura del gestor de leads de Altum IA"
+                    className={`absolute inset-0 h-full w-full object-cover transition-opacity duration-700 ease-out ${
+                      index === projectCarouselIndex ? 'opacity-100' : 'opacity-0'
+                    }`}
+                  />
+                ))}
                 <div className="absolute bottom-4 left-4">
                   <div className="flex h-9 w-9 items-center overflow-hidden rounded-full bg-gray-900 transition-all duration-300 ease-in-out group-hover:w-[168px]">
                     <span className="ml-4 whitespace-nowrap text-[13px] font-medium text-white opacity-0 transition-opacity delay-100 duration-300 ease-in-out group-hover:opacity-100">
-                      View case study
+                      Ver pantallas
                     </span>
                     <span className="ml-auto mr-3 -rotate-45 text-white transition-transform duration-300 ease-in-out group-hover:rotate-0">
                       <ArrowRight size={14} strokeWidth={2.2} />
@@ -419,11 +440,11 @@ function App() {
                 </div>
               </div>
               <p className="mt-4 text-[13px] leading-relaxed text-gray-600 sm:text-[14px]">
-                Transforming a dated platform into a conversion-focused brand
-                experience
+                Un panel interno para revisar oportunidades, priorizar leads y
+                bajar fricción en la prospección comercial.
               </p>
               <h3 className="mt-1 text-[14px] font-semibold text-gray-900 sm:text-[15px]">
-                Luminar
+                Gestor Leads
               </h3>
             </article>
           </div>
