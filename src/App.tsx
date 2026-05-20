@@ -375,7 +375,7 @@ function App() {
                 <img
                   src={viviendasPodestaProject}
                   alt="Proyecto Viviendas Podesta"
-                  className="h-full w-full object-cover"
+                  className="h-full w-full object-contain p-3 sm:p-4"
                 />
                 <div className="absolute bottom-4 left-4">
                   <div className="flex h-9 w-9 items-center overflow-hidden rounded-full bg-white transition-all duration-300 ease-in-out group-hover:w-[148px]">
